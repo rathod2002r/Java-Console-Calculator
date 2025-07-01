@@ -1,74 +1,43 @@
-# Java-Console-Calculator
+# 🧮 Java-Console-Calculator
 
-import java.util.Scanner;
+This project is a simple **Console-based Calculator** application written in **Java**. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division using a user-friendly, menu-driven interface.
 
-public class Calculator {
+---
 
-    public static double add(double a, double b) {
-        return a + b;
-    }
+## 🎯 Project Objective
 
-    public static double subtract(double a, double b) {
-        return a - b;
-    }
+To develop a basic Java console application using:
+- Method-based logic
+- Loops and conditional statements
+- Scanner for input handling
+- Exception-safe operations (like divide-by-zero)
 
-    public static double multiply(double a, double b) {
-        return a * b;
-    }
+---
 
-    public static double divide(double a, double b) {
-        if (b == 0) {
-            System.out.println("Error: Cannot divide by zero!");
-            return 0;
-        }
-        return a / b;
-    }
+## ✅ Features
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        boolean keepRunning = true;
+- Menu-driven UI with continuous loop
+- Operations: Add, Subtract, Multiply, Divide
+- Handles divide-by-zero error
+- Modular code with reusable methods
+- Easy to compile and run in terminal or IDE
 
-        while (keepRunning) {
-            System.out.println("\nChoose Operation: ");
-            System.out.println("1. Addition");
-            System.out.println("2. Subtraction");
-            System.out.println("3. Multiplication");
-            System.out.println("4. Division");
-            System.out.println("5. Exit");
-            System.out.print("Enter choice (1-5): ");
-            int choice = scanner.nextInt();
+---
 
-            if (choice == 5) {
-                keepRunning = false;
-                System.out.println("Calculator Closed.");
-                break;
-            }
+## 🧰 Tools & Technologies Used
 
-            System.out.print("Enter first number: ");
-            double num1 = scanner.nextDouble();
-            System.out.print("Enter second number: ");
-            double num2 = scanner.nextDouble();
+- Java (JDK 8 or above)
+- Command-line interface (Terminal / CMD)
+- IDE: IntelliJ / Eclipse / VS Code (optional)
 
-            double result = 0;
-            switch (choice) {
-                case 1:
-                    result = add(num1, num2);
-                    break;
-                case 2:
-                    result = subtract(num1, num2);
-                    break;
-                case 3:
-                    result = multiply(num1, num2);
-                    break;
-                case 4:
-                    result = divide(num1, num2);
-                    break;
-                default:
-                    System.out.println("Invalid choice.");
-                    continue;
-            }
-            System.out.println("Result: " + result);
-        }
-        scanner.close();
-    }
-}
+---
+
+## 🧪 How to Run
+
+1. Save the file as `Calculator.java`
+2. Open terminal or CMD in the project directory
+3. Compile and run the program:
+
+```bash
+javac Calculator.java
+java Calculator
